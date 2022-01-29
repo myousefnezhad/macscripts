@@ -1,4 +1,4 @@
-# macOS script
+# macOS scripts
 
 This is a personal repository for seting up my Apple computers.
 
