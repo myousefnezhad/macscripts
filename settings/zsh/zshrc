@@ -131,7 +131,7 @@ autoload -U compinit && compinit
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-
+POWERLEVEL9K_COLOR_SCHEME='light'
 # Startup Script
 source $HOME/opt/scripts/settings/zsh/zstartupscript.sh
 export PATH="/usr/local/opt/ed/bin:/usr/local/opt/ed/libexec/gnubin:$PATH"
