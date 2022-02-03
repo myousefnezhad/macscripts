@@ -132,6 +132,11 @@ autoload -U compinit && compinit
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
+#PATH="/opt/homebrew/opt/ed/libexec/gnubin:$PATH"
+
 # Startup Script
 source $HOME/opt/scripts/settings/zsh/zstartupscript.sh
 export PATH="/usr/local/opt/ed/bin:/usr/local/opt/ed/libexec/gnubin:$PATH"
+
+# Mac PATHs for brew and bin folder
+export PATH="$HOME/opt/scripts/bin:/opt/homebrew/opt/ed/bin:/opt/homebrew/opt/ed/libexec/gnubin:$HOME/opt/scripts/bin:$PATH"

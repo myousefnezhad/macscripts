@@ -66,7 +66,7 @@ export INSTALL_DIR="$HOME/opt"
 # Base directory of FSL
 export FSLDIR="$INSTALL_DIR/fsl"  # for FSL 5.0.1x
 # Base directory of Anaconda (Python 3.7.x)
-export ANACON_PATH="$INSTALL_DIR/miniconda3"
+export ANACON_PATH="$INSTALL_DIR/miniforge3"
 # Base directory of Julia
 export JULIA_PATH="$INSTALL_DIR/julia/bin"
 # Base direcory of AFNI
