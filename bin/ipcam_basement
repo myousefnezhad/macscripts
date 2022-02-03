@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source /home/tony/.ipcam 
+mplayer rtsp://$IPCAM_USER:$IPCAM_PASS@192.168.2.212/11

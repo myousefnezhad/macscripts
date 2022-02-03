@@ -1,0 +1,1 @@
+rsync -razvh --checksum --progress --update --delete /DATA/Documents/Papers  tony@192.168.2.55:/home/tony/Documents/.

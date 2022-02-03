@@ -1,0 +1,1 @@
+ssh -X tony@192.168.2.120 -p 1365 'nautilus'
