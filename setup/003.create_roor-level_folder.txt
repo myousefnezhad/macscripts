@@ -1,0 +1,18 @@
+1) Edit /etc/synthetic.conf using:
+sudo vim /etc/synthetic.conf
+
+2) Add list of folders to end of the file:
+
+DATA
+DATA1
+DATA2
+DATA3
+DATA4
+DATA5
+DATA20
+DATA21
+DATA22
+DATA30
+DATA90
+DATA91
+
