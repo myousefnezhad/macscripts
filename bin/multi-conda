@@ -1,0 +1,35 @@
+condaX64 () {
+export MINA=$(echo $PATH | sed 's|/Users/tony/opt/miniforge3/condabin||'| sed 's|/Users/tony/opt/miniforge3/bin||')
+export CONDA64='/Users/tony/opt/miniconda3-x64'
+export PATH="$CONDA64/bin:$CONDA64/condabin:$MINA"
+__conda_setup="$('$CONDA64/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "$CONDA64/etc/profile.d/conda.sh" ]; then
+        . "$CONDA64/etc/profile.d/conda.sh"
+    else
+        export PATH="$CONDA64/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+conda activate base
+}
+
+condaARM () {
+export MINA=$(echo $PATH | sed 's|/Users/tony/opt/miniconda3-x64/condabin||' | sed 's|/Users/tony/opt/miniconda3-x64/bin||')
+export CONDAARM='/Users/tony/opt/miniforge3'
+export PATH="$CONDAARM/bin:$CONDAARM/condabin:$MINA"
+__conda_setup="$('$CONDA64/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "$CONDAARM/etc/profile.d/conda.sh" ]; then
+        . "$CONDAARM/etc/profile.d/conda.sh"
+    else
+        export PATH="$CONDAARM/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+conda activate base
+}
