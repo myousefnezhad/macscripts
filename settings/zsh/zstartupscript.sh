@@ -173,3 +173,4 @@ fi
 if (( $EN_CLEAN_SCREEN != 0 )); then
   clear
 fi
+export HDF5_USE_FILE_LOCKING='FALSE'
