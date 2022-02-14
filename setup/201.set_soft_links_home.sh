@@ -6,4 +6,5 @@ ln -sf /DATA/Datasets5  ~/datasets5
 ln -sf /DATA/Workspace  ~/workspace
 ln -sf /DATA/Videos     ~/global_videos
 ln -sf /DATA/Pictures   ~/global_pictures
+ln -sf /DATA/Music      ~/global_music
 ln -sf /DATA/Datasets.mini ~/datasets.mini
