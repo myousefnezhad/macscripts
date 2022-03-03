@@ -1,2 +1,2 @@
-ssh -C -v xbian@192.168.2.61
+ssh -C -v xbian@172.20.60.2
 
