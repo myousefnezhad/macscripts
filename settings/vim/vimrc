@@ -61,6 +61,7 @@ set completeopt-=preview
 "let g:jedi#use_splits_not_buffers = "left"
 "let g:jedi#show_call_signatures = "0"
 "let g:jedi#popup_on_dot = 0
+set backspace=indent,eol,start
 
 syntax on
 "set cursorcolumn
