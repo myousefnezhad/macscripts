@@ -146,3 +146,5 @@ source $HOME/opt/scripts/bin/multi-conda
 export GOPATH="$HOME/go"
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
