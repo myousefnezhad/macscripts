@@ -1,2 +1,2 @@
-ssh -C -v xbian@172.20.60.2
+ssh -C -v tony@rose
 

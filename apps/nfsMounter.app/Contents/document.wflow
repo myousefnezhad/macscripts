@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>512</string>
+	<string>520</string>
 	<key>AMApplicationVersion</key>
 	<string>2.10</string>
 	<key>AMDocumentVersion</key>
@@ -59,19 +59,19 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>sudo mount -o nolocks -t nfs 172.20.10.1:/DATA   /DATA
-sudo mount -o nolocks -t nfs 172.20.10.1:/DATA/Downloads /Users/tony/Downloads/Downloads
-sudo mount -o nolocks -t nfs 172.20.10.1:/DATA1  /DATA1
-sudo mount -o nolocks -t nfs 172.20.10.1:/DATA2  /DATA2
-sudo mount -o nolocks -t nfs 172.20.10.1:/DATA3  /DATA3
-sudo mount -o nolocks -t nfs 172.20.10.1:/DATA4  /DATA4
-sudo mount -o nolocks -t nfs 172.20.10.1:/DATA5  /DATA5
-sudo mount -o nolocks -t nfs 172.20.10.1:/DATA20 /DATA20
-sudo mount -o nolocks -t nfs 172.20.10.1:/DATA21 /DATA21
-sudo mount -o nolocks -t nfs 172.20.10.1:/DATA22 /DATA22
-sudo mount -o nolocks -t nfs 172.20.10.1:/DATA30 /DATA30
-sudo mount -o nolocks -t nfs 172.20.10.1:/DATA90 /DATA90
-sudo mount -o nolocks -t nfs 172.20.10.1:/DATA91 /DATA91
+					<string>sudo mount -o nolocks -t nfs 192.168.20.1:/DATA   /DATA
+sudo mount -o nolocks -t nfs 192.168.20.1:/DATA/Downloads /Users/tony/Downloads/Downloads
+sudo mount -o nolocks -t nfs 192.168.20.1:/DATA1  /DATA1
+sudo mount -o nolocks -t nfs 192.168.20.1:/DATA2  /DATA2
+sudo mount -o nolocks -t nfs 192.168.20.1:/DATA3  /DATA3
+sudo mount -o nolocks -t nfs 192.168.20.1:/DATA4  /DATA4
+sudo mount -o nolocks -t nfs 192.168.20.1:/DATA5  /DATA5
+sudo mount -o nolocks -t nfs 192.168.20.1:/DATA20 /DATA20
+sudo mount -o nolocks -t nfs 192.168.20.1:/DATA21 /DATA21
+sudo mount -o nolocks -t nfs 192.168.20.1:/DATA22 /DATA22
+sudo mount -o nolocks -t nfs 192.168.20.1:/DATA30 /DATA30
+sudo mount -o nolocks -t nfs 192.168.20.1:/DATA90 /DATA90
+sudo mount -o nolocks -t nfs 192.168.20.1:/DATA91 /DATA91
 </string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
@@ -185,7 +185,7 @@ sudo mount -o nolocks -t nfs 172.20.10.1:/DATA91 /DATA91
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>451.000000:642.000000</string>
+				<string>309.000000:252.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
