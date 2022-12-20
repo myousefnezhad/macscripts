@@ -1,2 +1,2 @@
-ssh -Y -p 1365 tony@ironman
+ssh -Y tony@ironman
 
