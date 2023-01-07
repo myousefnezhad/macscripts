@@ -1,0 +1,1 @@
+ssh -t tony@christopher "sudo docker exec -it redis /usr/local/bin/redis-cli"
