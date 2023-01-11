@@ -142,14 +142,4 @@ export PATH="/usr/local/opt/ed/bin:/usr/local/opt/ed/libexec/gnubin:$PATH"
 export PATH="$HOME/opt/scripts/bin:/opt/homebrew/opt/ed/bin:/opt/homebrew/opt/ed/libexec/gnubin:$HOME/opt/scripts/bin:$PATH"
 source $HOME/opt/scripts/bin/multi-conda
 
-
-export GOPATH="$HOME/go"
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOPATH/bin
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
-# PostgresSQL client
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"
+export PATH="/Users/tony/opt/flutter/bin:$PATH"
