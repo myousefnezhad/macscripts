@@ -1,1 +1,1 @@
-ssh -p22 -o KexAlgorithms=+diffie-hellman-group1-sha1 -o PubkeyAcceptedKeyTypes=+ssh-rsa -c aes256-cbc -o HostkeyAlgorithms=ssh-dss,ssh-rsa root@172.20.0.1
+ssh -p2365 -o KexAlgorithms=+diffie-hellman-group1-sha1 -o PubkeyAcceptedKeyTypes=+ssh-rsa -c aes256-cbc -o HostkeyAlgorithms=ssh-dss,ssh-rsa root@172.20.0.1
