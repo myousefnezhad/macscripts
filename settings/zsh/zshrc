@@ -143,6 +143,6 @@ export PATH="$HOME/opt/scripts/bin:/opt/homebrew/opt/ed/bin:/opt/homebrew/opt/ed
 source $HOME/opt/scripts/bin/multi-conda
 
 export ANDROID_HOME="/Users/tony/Library/Android/sdk"
-export PATH="/Users/tony/opt/flutter/bin:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH"
+export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH"
 
 
