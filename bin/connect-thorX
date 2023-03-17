@@ -1,2 +1,2 @@
-ssh -Y tony@thor
+ssh -p 1365 -Y tony@thor
 
