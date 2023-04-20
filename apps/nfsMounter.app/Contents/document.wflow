@@ -66,7 +66,7 @@ sudo mount -o nolocks -t nfs 172.20.10.1:/DATA2  /DATA2
 sudo mount -o nolocks -t nfs 172.20.10.1:/DATA3  /DATA3
 sudo mount -o nolocks -t nfs 172.20.10.1:/DATA4  /DATA4
 sudo mount -o nolocks -t nfs 172.20.10.1:/DATA5  /DATA5
-sudo mount -o nolocks -t nfs 172.20.10.1:/DATA5  /DATA6
+sudo mount -o nolocks -t nfs 172.20.10.1:/DATA6  /DATA6
 sudo mount -o nolocks -t nfs 172.20.10.1:/DATA20 /DATA20
 sudo mount -o nolocks -t nfs 172.20.10.1:/DATA21 /DATA21
 sudo mount -o nolocks -t nfs 172.20.10.1:/DATA22 /DATA22
@@ -185,7 +185,7 @@ sudo mount -o nolocks -t nfs 172.20.10.1:/DATA30 /DATA30
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>546.500000:611.000000</string>
+				<string>546.500000:490.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
