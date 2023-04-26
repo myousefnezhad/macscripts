@@ -1,0 +1,12 @@
+#!/bin/bash
+if [  -z "$1" ] 
+  then
+	  openssl rand -hex 20
+  else
+       if [ -z "$2" ]
+	 then 
+	      openssl rand -hex $1
+	else
+	      openssl rand -$2 $1
+	fi
+fi
