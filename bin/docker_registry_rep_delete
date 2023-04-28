@@ -1,0 +1,23 @@
+#!/bin/bash
+source $HOME/.docker_registry 
+
+REP_STATUS=$(docker_registry_rep_exist $1)
+if [[ $REP_STATUS == "NOT_FOUND" ]]; then
+	echo REP_NOT_FOUND
+else
+
+	NUM_TAGS=$(docker_registry_tag_list $1 | jq '. | length')
+	if [[ $NUM_TAGS != "0" ]]; then	
+		echo Please remove all tags first
+		echo Number of tags: $NUM_TAGS
+		docker_registry_tag_list $1
+	else
+		echo "Host info: $DOCKER_HOST_IP"
+		echo "Container info: $DOCKER_HOST_NAME"
+		GARBAGE_CMD=$(echo "sudo docker exec $(echo $DOCKER_HOST_NAME) /bin/registry garbage-collect /etc/docker/registry/config.yml --delete-untagged" | sed 's|\r||g')
+		ssh $DOCKER_HOST_IP $GARBAGE_CMD
+		DELETE_CMD=$(echo "sudo docker exec $(echo $DOCKER_HOST_NAME) rm -r /var/lib/registry/docker/registry/v2/repositories/$1" | sed 's|\r||g')
+		ssh $DOCKER_HOST_IP $DELETE_CMD
+		docker_registry_rep_list
+	fi
+fi

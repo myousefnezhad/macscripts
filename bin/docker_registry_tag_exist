@@ -1,0 +1,6 @@
+#!/bin/bash
+if docker_registry_tag_list $1 | grep -qw $2; then
+	echo FOUND
+else
+	echo NOT_FOUND
+fi

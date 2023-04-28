@@ -1,0 +1,6 @@
+#!/bin/bash
+if docker_registry_rep_list | grep -qw $1; then
+	echo FOUND
+else
+	echo NOT_FOUND
+fi
