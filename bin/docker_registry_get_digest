@@ -1,7 +1,5 @@
 #!/bin/bash
-$HOME/.docker_registry 
-#FOUND="FOUND"
-
+source $HOME/.docker_registry 
 REP_STATUS=$(docker_registry_rep_exist $1)
 if [[ $REP_STATUS == "FOUND" ]]; then
 	TAG_STATUS=$(docker_registry_tag_exist $1 $2) 
@@ -13,18 +11,3 @@ if [[ $REP_STATUS == "FOUND" ]]; then
 else
 	echo REP_NOT_FOUND
 fi
-
-#curl -s --user $(cat ~/.docker_registry) https://docker.yousefnezhad.com/v2/$1/tags/list | jq -r '.tags'
-
-
-#if docker_registry_tag_list $1 | grep -qw $2; then
-#	echo FOUND
-#else
-#	echo NOT_FOUND
-#fi
-#curl -s --user $(echo $DOCKER_REGISTRY_AUTH) $(echo $DOCKER_REGISTRY_URL)$1/tags/list | jq -r '.tags'
-#if docker_registry_tag_list $1 | grep -qw $2; then
-#	echo FOUND
-#else
-#	echo NOT_FOUND
-#fi

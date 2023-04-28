@@ -1,6 +1,5 @@
 #!/bin/bash
-$HOME/.docker_registry 
-
+source $HOME/.docker_registry 
 STATUS=$(docker_registry_get_digest $1 $2)
 if [[ $STATUS == "REP_NOT_FOUND" ]]; then	
 	echo REP_NOT_FOUND
@@ -19,29 +18,3 @@ else
 
 	fi
 fi
-
-
-#	TAG_STATUS=$(docker_registry_tag_exist $1 $2) 
-#	if [[ $TAG_STATUS == "FOUND" ]]; then
-#		curl --user $(echo $DOCKER_REGISTRY_AUTH) -s -i -H "Accept: application/vnd.docker.distribution.manifest.v2+json" $(echo $DOCKER_REGISTRY_URL)$1/manifests/$2 | grep Docker-Content-Digest | grep sha | sed 's|Docker-Content-Digest: ||g'
-#	else
-#		echo TAG_NOT_FOUND
-#	fi
-#else
-#	echo REP_NOT_FOUND
-#fi
-
-#curl -s --user $(cat ~/.docker_registry) https://docker.yousefnezhad.com/v2/$1/tags/list | jq -r '.tags'
-
-
-#if docker_registry_tag_list $1 | grep -qw $2; then
-#	echo FOUND
-#else
-#	echo NOT_FOUND
-#fi
-#curl -s --user $(echo $DOCKER_REGISTRY_AUTH) $(echo $DOCKER_REGISTRY_URL)$1/tags/list | jq -r '.tags'
-#if docker_registry_tag_list $1 | grep -qw $2; then
-#	echo FOUND
-#else
-#	echo NOT_FOUND
-#fi
