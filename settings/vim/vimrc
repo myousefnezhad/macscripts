@@ -19,6 +19,8 @@ Plugin 'trusktr/seti.vim'
 Plugin 'orenhe/pylint.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'vim-scripts/Tabmerge'
+
 
 "Plugin 'git://git.wincent.com/command-t.git'
 "Plugin 'jiangmiao/auto-pairs'
@@ -73,6 +75,10 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
 "let g:jedi#show_call_signatures = "0"
 "let g:jedi#popup_on_dot = 0
 set backspace=indent,eol,start
+
+let g:rustfmt_autosave = 1
+let g:rustfmt_emit_files = 1
+let g:rustfmt_fail_silently = 0
 
 syntax on
 "set cursorcolumn
