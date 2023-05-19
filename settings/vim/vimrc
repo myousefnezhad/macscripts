@@ -20,7 +20,6 @@ Plugin 'orenhe/pylint.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
-
 "Plugin 'git://git.wincent.com/command-t.git'
 "Plugin 'jiangmiao/auto-pairs'
 "Plugin 'lervag/vimtex'
@@ -54,6 +53,17 @@ let g:lightline = {
 			\}
 
 set completeopt-=preview
+
+"inoremap <silent><expr> <TAB>
+"      \ pumvisible() ? "\<C-n>" :
+"      \ <SID>check_back_space() ? "\<TAB>" :
+"      \ coc#refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice.
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 
 "let g:jedi#auto_initialization = 0
