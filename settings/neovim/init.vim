@@ -3,7 +3,7 @@ set nocompatible
 filetype off
 
 " We use Vundle manager
-set rtp+=/Users/tony/opt/vim/bundle/Vundle.vim
+set rtp+=/Users/tony/opt/neovim/bundle/Vundle.vim
 
 " Plugin defines here
 call vundle#begin()
