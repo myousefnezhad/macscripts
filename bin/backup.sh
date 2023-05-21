@@ -2,10 +2,10 @@
 ##################################### Parameters ###################################
 LOG_FILE_FORMAT=$(date +%Y.%m.itonymax)
 LOG_PATH="/IRONMAN/logs/$LOG_FILE_FORMAT"
-RSY_ROOT=("/Users/tony/Backup" )
-RST_NAME=("Documents" )
-RSY_SCR=("/IRONMAN20/Documents" )
-RSY_DST=("/Users/tony/Backup/. " )
+RSY_ROOT=("/Users/tony/Backup" "/Users/tony/Backup")
+RST_NAME=("Documents" "Datasets.bak")
+RSY_SCR=("/IRONMAN20/Documents" "/IRONMAN30/Datasets.bak")
+RSY_DST=("/Users/tony/Backup/. " "/Users/tony/Backup/. ")
 #RCO_ROOT=()
 #RCO_NAME=()
 #RCO_SCR=()

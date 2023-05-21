@@ -76,7 +76,6 @@ autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 
 
-
 cabbrev ss VimpanelSessionMake
 cabbrev sl VimpanelSessionLoad
 cabbrev vp Vimpanel
