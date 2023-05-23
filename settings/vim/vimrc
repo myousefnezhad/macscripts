@@ -79,6 +79,7 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 
 let g:NERDTreeQuitOnOpen = 1
 
+set mouse=a
 
 cabbrev ss VimpanelSessionMake
 cabbrev sl VimpanelSessionLoad
