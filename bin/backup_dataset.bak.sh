@@ -1,10 +1,10 @@
 # Backup Script
 ##################################### Parameters ###################################
-LOG_FILE_FORMAT=$(date +%Y.%m.itonymax)
+LOG_FILE_FORMAT=$(date +%Y.%m.data_back.itonymax)
 LOG_PATH="/IRONMAN/logs/$LOG_FILE_FORMAT"
 RSY_ROOT=("/Users/tony/Backup")
-RST_NAME=("Documents")
-RSY_SCR=("/IRONMAN20/Documents")
+RST_NAME=("Datasets.bak")
+RSY_SCR=("/IRONMAN30/Datasets.bak")
 RSY_DST=("/Users/tony/Backup/. ")
 #RCO_ROOT=()
 #RCO_NAME=()
