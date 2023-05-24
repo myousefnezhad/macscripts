@@ -1,0 +1,4 @@
+"set shell=zsh\ -i
+"call system('source /Users/tony/.zshrc')
+set guifont=MesloLGM\ Nerd\ Font:h20
+let g:coc_node_path = '/Users/tony/.nvm/versions/node/v18.16.0/bin/node'
