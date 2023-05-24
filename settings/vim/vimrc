@@ -22,7 +22,7 @@ Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'vim-scripts/Tabmerge'
 Plugin 'mihaifm/vimpanel'
 Plugin 'ryanoasis/vim-devicons'
-
+"Plugin 'nvim-lua/telescope.nvim'
 
 "Plugin 'git://git.wincent.com/command-t.git'
 "Plugin 'jiangmiao/auto-pairs'
@@ -79,6 +79,8 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 
 let g:NERDTreeQuitOnOpen = 1
 
+nmap <F6> :NERDTreeToggle<CR>
+
 set mouse=a
 
 cabbrev ss VimpanelSessionMake
@@ -103,6 +105,7 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 
+
 "let g:jedi#auto_initialization = 0
 "let g:jedi#auto_vim_configuration = 0
 "let g:jedi#use_tabs_not_buffers = 1
@@ -115,7 +118,7 @@ let g:rustfmt_autosave = 1
 let g:rustfmt_emit_files = 1
 let g:rustfmt_fail_silently = 0
 
-set shell=zsh\ -i
+"set shell=zsh\ -i
 
 syntax on
 "set cursorcolumn
