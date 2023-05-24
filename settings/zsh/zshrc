@@ -128,8 +128,9 @@ autoload -U compinit && compinit
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+#alias ohmyzsh="vim ~/.oh-my-zsh"
+alias yt-dlp="yt-dlp -f mp4"
 #
 
 #PATH="/opt/homebrew/opt/ed/libexec/gnubin:$PATH"
