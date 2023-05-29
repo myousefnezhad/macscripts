@@ -99,7 +99,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon anaconda battery user host load statu
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux conda-zsh-completion kubectl-autocomplete)
+plugins=(git tmux conda-zsh-completion kubectl-autocomplete zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
