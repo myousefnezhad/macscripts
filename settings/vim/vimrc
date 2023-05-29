@@ -81,7 +81,7 @@ let g:NERDTreeQuitOnOpen = 1
 
 nmap <F6> :NERDTreeToggle<CR>
 
-set mouse=a
+"set mouse=a
 
 cabbrev ss VimpanelSessionMake
 cabbrev sl VimpanelSessionLoad

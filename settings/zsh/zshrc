@@ -132,7 +132,7 @@ alias zshconfig="vim ~/.zshrc"
 #alias ohmyzsh="vim ~/.oh-my-zsh"
 alias yt-dlp="yt-dlp -f mp4"
 #
-
+alias vim="nvim"
 #PATH="/opt/homebrew/opt/ed/libexec/gnubin:$PATH"
 
 # Startup Script
