@@ -47,7 +47,9 @@ use {
   use('mxsdev/nvim-dap-vscode-js')
   use('airblade/vim-gitgutter')
 
-
+use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+  require("toggleterm").setup()
+end}
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
