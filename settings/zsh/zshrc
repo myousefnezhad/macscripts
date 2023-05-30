@@ -133,7 +133,10 @@ alias zshconfig="vim ~/.zshrc"
 alias yt-dlp="yt-dlp -f mp4"
 #
 alias vim="nvim"
-alias ls="colorls"
+if command -v colorls &> /dev/null
+then
+  alias ls="colorls"
+fi
 #PATH="/opt/homebrew/opt/ed/libexec/gnubin:$PATH"
 
 # Startup Script
