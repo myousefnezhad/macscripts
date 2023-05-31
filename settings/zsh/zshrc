@@ -133,10 +133,14 @@ alias zshconfig="vim ~/.zshrc"
 alias yt-dlp="yt-dlp -f mp4"
 #
 alias vim="nvim"
-if command -v colorls &> /dev/null
+if command -v lsd &> /dev/null
 then
-  alias ls="colorls"
+  alias ls="lsd"
 fi
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 
 #alias codelldb="while sleep 1; do $(find $HOME/.vscode/extensions -name codelldb) --port 13000 --liblldb $(find $HOME/.vscode/extensions/ -name liblldb.dylib); done"
 #alias lldb-vscode="while sleep 1; do $(find $HOME/.vscode/extensions -name lldb-vscode); done"
