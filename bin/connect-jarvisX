@@ -1,2 +1,3 @@
+xterm -C ls
 ssh -Y tony@jarvis
 
