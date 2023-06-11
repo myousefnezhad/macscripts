@@ -1,2 +1,3 @@
-ssh -Y tony@bee
+xterm -C ls
+ssh -Y tony@bee.cluster.learningbymachine.com
 

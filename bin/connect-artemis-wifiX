@@ -1,1 +1,2 @@
-ssh -Y tony@172.30.20.50
+xterm -C ls
+ssh -Y tony@wifi.artemis.cluster.learningbymachine.com

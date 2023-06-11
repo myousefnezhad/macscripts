@@ -1,2 +1,2 @@
-ssh -C -v tony@dave
+ssh tony@dave.cluster.learningbymachine.com
 

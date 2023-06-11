@@ -1,2 +1,3 @@
-ssh -Y tony@ninja
+xterm -C ls
+ssh -Y tony@ninja.cluster.learningbymachine.com
 

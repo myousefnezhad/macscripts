@@ -1,2 +1,3 @@
-ssh -Y tony@phoenix
+xterm -C ls
+ssh -Y tony@phoenix.cluster.learningbymachine.com
 

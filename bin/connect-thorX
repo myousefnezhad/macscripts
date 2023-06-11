@@ -1,2 +1,3 @@
-ssh  -Y tony@thor
+xterm -C ls
+ssh  -Y tony@thor.cluster.learningbymachine.com
 

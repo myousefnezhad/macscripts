@@ -1,2 +1,3 @@
-ssh -Y tony@artemis
+xterm -C ls
+ssh -Y tony@artemis.cluster.learningbymachine.com
 
