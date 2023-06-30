@@ -1,0 +1,3 @@
+xterm -C ls
+ssh -Y tony@jericho.cluster.learningbymachine.com
+
