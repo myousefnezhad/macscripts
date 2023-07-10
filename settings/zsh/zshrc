@@ -133,12 +133,12 @@ alias zshconfig="vim ~/.zshrc"
 #alias ohmyzsh="vim ~/.oh-my-zsh"
 alias yt-dlp="yt-dlp -f mp4"
 #
-alias vim="nvim"
+#alias vim="nvim"
 if command -v lsd &> /dev/null
 then
   alias ls="lsd"
 fi
-alias l='ls -l'
+alias l='/bin/ls'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
