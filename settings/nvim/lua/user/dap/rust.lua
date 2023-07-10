@@ -23,6 +23,9 @@ rt.setup({
   },
 })
 
+require("mason").setup({
+  PATH = "append"
+})
 
 -- local dap = require "dap"
 --dap.adapters.codelldb = {
