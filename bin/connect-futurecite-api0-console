@@ -1,0 +1,1 @@
+gcloud compute ssh --zone "northamerica-northeast2-b" "api0-console" --project "api-0-392423"
