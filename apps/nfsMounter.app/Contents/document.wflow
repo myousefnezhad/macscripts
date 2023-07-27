@@ -60,19 +60,20 @@
 				<dict>
 					<key>COMMAND_STRING</key>
 					<string>sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN   /IRONMAN
-sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN/Downloads /Users/tony/Downloads/Downloads
 sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN1  /IRONMAN1
 sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN2  /IRONMAN2
 sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN3  /IRONMAN3
 sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN4  /IRONMAN4
 sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN5  /IRONMAN5
 sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN6  /IRONMAN6
+sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN7  /IRONMAN7
 sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN20 /IRONMAN20
-sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN21 /IRONMAN21
 sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN22 /IRONMAN22
 sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN30 /IRONMAN30
-sudo mount -o nolocks -t nfs 172.20.20.40:/THOR1 /THOR1
-sudo mount -o nolocks -t nfs 172.20.20.40:/THOR2 /THOR2
+sudo mount -o nolocks -t nfs 172.20.20.10:/JARVIS   /JARVIS
+sudo mount -o nolocks -t nfs 172.20.20.10:/JARVIS1  /JARVIS1
+sudo mount -o nolocks -t nfs 172.20.20.10:/JARVIS2  /JARVIS2
+sudo mount -o nolocks -t nfs 172.20.20.10:/WORKSPACE /WORKSPACE
 </string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
@@ -186,7 +187,7 @@ sudo mount -o nolocks -t nfs 172.20.20.40:/THOR2 /THOR2
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>546.500000:632.000000</string>
+				<string>667.000000:506.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
