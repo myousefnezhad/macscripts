@@ -70,7 +70,6 @@ sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN7  /IRONMAN7
 sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN20 /IRONMAN20
 sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN22 /IRONMAN22
 sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN30 /IRONMAN30
-sudo mount -o nolocks -t nfs 172.20.20.10:/JARVIS   /JARVIS
 sudo mount -o nolocks -t nfs 172.20.20.10:/JARVIS1  /JARVIS1
 sudo mount -o nolocks -t nfs 172.20.20.10:/JARVIS2  /JARVIS2
 sudo mount -o nolocks -t nfs 172.20.20.10:/WORKSPACE /WORKSPACE
@@ -187,7 +186,7 @@ sudo mount -o nolocks -t nfs 172.20.20.10:/WORKSPACE /WORKSPACE
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>667.000000:506.000000</string>
+				<string>667.000000:554.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
