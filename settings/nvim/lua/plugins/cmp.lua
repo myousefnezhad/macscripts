@@ -3,7 +3,7 @@ return {
     "L3MON4D3/LuaSnip",
     build = vim.fn.has "win32" ~= 0
         and "echo -e 'NOTE: jsregexp is optional, so not a big deal if it fails to build\n'; make install_jsregexp"
-      or nil,
+        or nil,
     dependencies = { "rafamadriz/friendly-snippets" },
     config = require "plugins.configs.luasnip",
   },
@@ -34,10 +34,10 @@ return {
       return {
         enabled = function()
           local dap_prompt = require("astronvim.utils").is_available "cmp-dap" -- add interoperability with cmp-dap
-            and vim.tbl_contains(
-              { "dap-repl", "dapui_watches", "dapui_hover" },
-              vim.api.nvim_get_option_value("filetype", { buf = 0 })
-            )
+              and vim.tbl_contains(
+                { "dap-repl", "dapui_watches", "dapui_hover" },
+                vim.api.nvim_get_option_value("filetype", { buf = 0 })
+              )
           if vim.api.nvim_get_option_value("buftype", { buf = 0 }) == "prompt" and not dap_prompt then return false end
           return vim.g.cmp_enabled
         end,
@@ -77,17 +77,17 @@ return {
           ["<C-y>"] = cmp.config.disable,
           ["<C-e>"] = cmp.mapping { i = cmp.mapping.abort(), c = cmp.mapping.close() },
           ["<CR>"] = cmp.mapping.confirm { select = false },
-          ["<Tab>"] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-              cmp.select_next_item()
-            elseif luasnip.expand_or_jumpable() then
-              luasnip.expand_or_jump()
-            elseif has_words_before() then
-              cmp.complete()
-            else
-              fallback()
-            end
-          end, { "i", "s" }),
+          -- ["<Tab>"] = cmp.mapping(function(fallback)
+          --   if cmp.visible() then
+          --     cmp.select_next_item()
+          --   elseif luasnip.expand_or_jumpable() then
+          --     luasnip.expand_or_jump()
+          --   elseif has_words_before() then
+          --     cmp.complete()
+          --   else
+          --     fallback()
+          --   end
+          -- end, { "i", "s" }),
           ["<S-Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_prev_item()
@@ -99,10 +99,11 @@ return {
           end, { "i", "s" }),
         },
         sources = cmp.config.sources {
-          { name = "nvim_lsp", priority = 1000 },
-          { name = "luasnip", priority = 750 },
-          { name = "buffer", priority = 500 },
-          { name = "path", priority = 250 },
+          { name = "nvim_lsp",    priority = 1000 },
+          { name = "luasnip",     priority = 750 },
+          { name = "buffer",      priority = 500 },
+          { name = "path",        priority = 250 },
+          { name = "cmp_tabnine", priority = 200 },
         },
       }
     end,

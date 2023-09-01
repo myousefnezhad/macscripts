@@ -71,6 +71,7 @@ return {
   polish = function()
     require("user.dap.nodejs")
     require("user.dap.rust")
+    require("user.lsp.tabnine")
 
     -- Set up custom filetypes
     -- vim.filetype.add {

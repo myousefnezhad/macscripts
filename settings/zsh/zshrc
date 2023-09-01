@@ -149,7 +149,11 @@ alias lt='ls --tree'
 
 # Startup Script
 source $HOME/opt/scripts/settings/zsh/zstartupscript.sh
-export PATH="/usr/local/opt/ed/bin:/Users/tony/opt/google-cloud-sdk/bin:/usr/local/opt/ed/libexec/gnubin:$PATH"
+export PATH="/Users/tony/opt/go/bin:/usr/local/opt/ed/bin:/Users/tony/opt/google-cloud-sdk/bin:/usr/local/opt/ed/libexec/gnubin:$PATH"
+
+export CPLUS_INCLUDE_PATH="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include"
+
+export GOPATH="$HOME/go"
 
 # Mac PATHs for brew and bin folder
 export PATH="$HOME/opt/scripts/bin:/opt/homebrew/opt/ed/bin:/opt/homebrew/opt/ed/libexec/gnubin:$HOME/opt/scripts/bin:$PATH"

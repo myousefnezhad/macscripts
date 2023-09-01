@@ -33,7 +33,7 @@ export EN_JULIA="1"
 # This sets AFNI base directory based on $AFNI_PATH
 export EN_AFNI="1"
 # This sets FSL base directory based on $FSLDIR and then run fsl.sh script
-export EN_FSL="1"
+export EN_FSL="0"
 # This set FreeSurface base directory and run the setup scrip
 export EN_FREESURFACE="0"
 # This enables CUDA environment variables
