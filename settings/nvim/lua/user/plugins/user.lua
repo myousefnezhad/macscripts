@@ -1,4 +1,5 @@
 return {
+  'nvim-treesitter/nvim-treesitter',
   'mxsdev/nvim-dap-vscode-js',
   'simrat39/rust-tools.nvim',
   'airblade/vim-gitgutter',
@@ -22,6 +23,10 @@ return {
     build = function()
       vim.cmd [[silent! GoInstallDeps]]
     end,
+  },
+  {
+    'windwp/nvim-ts-autotag',
+    require('nvim-ts-autotag').setup()
   },
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax

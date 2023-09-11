@@ -72,8 +72,8 @@ sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN22 /IRONMAN22
 sudo mount -o nolocks -t nfs 172.20.10.1:/IRONMAN30 /IRONMAN30
 sudo mount -o nolocks -t nfs 172.20.20.10:/JARVIS1  /JARVIS1
 sudo mount -o nolocks -t nfs 172.20.20.10:/JARVIS2  /JARVIS2
-sudo mount -o nolocks -t nfs 172.20.20.10:/WORKSPACE /WORKSPACE
-sudo mount -o nolocks -t nfs 172.20.20.10:/DOWNLOADS /DOWNLOADS
+sudo mount -o nolocks -t nfs 172.20.20.70:/WORKSPACE /WORKSPACE
+sudo mount -o nolocks -t nfs 172.20.20.70:/DOWNLOADS /DOWNLOADS
 </string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
@@ -187,7 +187,7 @@ sudo mount -o nolocks -t nfs 172.20.20.10:/DOWNLOADS /DOWNLOADS
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>264.500000:518.000000</string>
+				<string>264.500000:672.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
