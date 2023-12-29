@@ -7,11 +7,9 @@ return {
       "json", "html", "git_config", "git_rebase", "gitcommit", "gitignore", "dockerfile", "cpp", "cuda", "bash", "css"
     })
   end,
-
   require 'nvim-treesitter.configs'.setup {
     autotag = {
       enable = true,
     }
   },
-
 }
