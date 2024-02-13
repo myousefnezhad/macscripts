@@ -16,6 +16,7 @@ return {
       null_ls.builtins.formatting.goimports_reviser,
       null_ls.builtins.formatting.golines,
       null_ls.builtins.formatting.rustfmt,
+      null_ls.builtins.formatting.dart_format,
     }
     return config -- return final config table
   end,

@@ -23,7 +23,9 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
-    ["<leader>sql"] = { ":%!sql-formatter-cli .<cr>", desc = "SQL Formatter" }
+    ["<leader>sql"] = { ":%!sql-formatter-cli .<cr>", desc = "SQL Formatter" },
+    ["<leader>hr"] = { '<cmd>FlutterReload<CR>', noremap = true, silent = true }
+
   },
   t = {
     -- setting a mapping to false will disable it

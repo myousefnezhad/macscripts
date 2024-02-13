@@ -71,6 +71,7 @@ return {
   polish = function()
     require("user.dap.nodejs")
     require("user.dap.rust")
+    require("user.dap.flutter")
     -- require("user.lsp.sqlfmt")
     -- require("user.lsp.sqlls")
     require("user.lsp.tabnine")
