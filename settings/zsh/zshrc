@@ -173,3 +173,5 @@ export NVM_DIR="$HOME/.nvm"
 
 export COPYFILE_DISABLE=true
 export PATH="/opt/homebrew/opt/libpq/bin:/Users/tony/opt/flutter/bin:$PATH"
+# Added by LM Studio CLI tool (lms)
+export PATH="$PATH:/Users/tony/.cache/lm-studio/bin"
