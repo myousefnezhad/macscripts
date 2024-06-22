@@ -175,3 +175,9 @@ export COPYFILE_DISABLE=true
 export PATH="/opt/homebrew/opt/libpq/bin:/Users/tony/opt/flutter/bin:$PATH"
 # Added by LM Studio CLI tool (lms)
 export PATH="$PATH:/Users/tony/.cache/lm-studio/bin"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home
