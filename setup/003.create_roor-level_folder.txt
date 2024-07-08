@@ -3,6 +3,8 @@ sudo vim /etc/synthetic.conf
 
 2) Add list of folders to end of the file:
 
+Note: MAX<tab>Users
+
 IRONMAN
 IRONMAN1
 IRONMAN2
@@ -18,4 +20,4 @@ JARVIS
 JARVIS1
 JARVIS2
 WORKSPACE
-
+MAX	Users/tony/MAX
