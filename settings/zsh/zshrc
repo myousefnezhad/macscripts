@@ -182,3 +182,8 @@ export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home
+
+alias pgl='psql -h db.cluster.learningbymachine.com -p 9999 -U postgres'
+alias pgld='psql -h db.cluster.learningbymachine.com -p 9999 -U postgres -d'
+alias scyl='cqlsh 172.25.59.2 $(cat ~/.cqlcli )'
+alias scyle='cqlsh 172.25.59.2 $(cat ~/.cqlcli ) -e'
