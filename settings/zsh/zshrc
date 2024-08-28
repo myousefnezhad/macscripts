@@ -4,7 +4,7 @@ export TERM="screen-256color"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 
-export PATH="$HOME/opt/go/bin:/usr/local/opt/ed/bin:$HOME/opt/google-cloud-sdk/bin:/usr/local/opt/ed/libexec/gnubin:/Users/tony/.local/share/gem/ruby/3.3.0/bin:$PATH"
+export PATH="$HOME/opt/go/bin:$HOME/go/bin:/usr/local/opt/ed/bin:$HOME/opt/google-cloud-sdk/bin:/usr/local/opt/ed/libexec/gnubin:/Users/tony/.local/share/gem/ruby/3.3.0/bin:$PATH"
 export ZSH="$HOME/opt/oh-my-zsh"
 export LC_ALL=en_US.UTF-8
 

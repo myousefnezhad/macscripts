@@ -216,6 +216,7 @@ return {
     config = function(_, opts) require("gopher").setup(opts) end,
     build = function() vim.cmd [[silent! GoInstallDeps]] end,
   },
+  "nanotee/sqls.nvim",
   {
     "windwp/nvim-ts-autotag",
     require("nvim-ts-autotag").setup(),
@@ -245,6 +246,10 @@ return {
         },
       }
 
+      lspconfig.sqls.setup {
+        cmd = { "/Users/tony/go/bin/sqls", "--config", "/Users/tony/.config/sqls/config.yaml" },
+        on_attach = function(client, bufnr) require("sqls").on_attach(client, bufnr) end,
+      }
       --   lspconfig.rust_analyzer.setup {
       --     on_attach = function(client, bufnr)
       --       -- Enable auto formatting on save
@@ -260,19 +265,36 @@ return {
     end,
   },
   {
-    "tpope/vim-dadbod",
-    cmd = { "DB", "DBUI", "DBPrompt" },
-    config = function() end,
-  },
-  {
     "kristijanhusak/vim-dadbod-ui",
-    cmd = { "DBUI", "DBUIToggle", "DBUIFindBuffer" },
-    dependencies = { "tpope/vim-dadbod" },
+    dependencies = {
+      { "tpope/vim-dadbod", lazy = true },
+      { "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
+    },
+    cmd = {
+      "DBUI",
+      "DBUIToggle",
+      "DBUIAddConnection",
+      "DBUIFindBuffer",
+    },
+    init = function()
+      -- Your DBUI configuration
+      vim.g.db_ui_use_nerd_fonts = 1
+    end,
   },
-  {
-    "kristijanhusak/vim-dadbod-completion",
-    ft = { "sql", "mysql", "plsql" },
-    dependencies = { "tpope/vim-dadbod" },
-  },
+  -- {
+  --   "tpope/vim-dadbod",
+  --   cmd = { "DB", "DBUI", "DBPrompt" },
+  --   config = function() end,
+  -- },
+  -- {
+  --   "kristijanhusak/vim-dadbod-ui",
+  --   cmd = { "DBUI", "DBUIToggle", "DBUIFindBuffer" },
+  --   dependencies = { "tpope/vim-dadbod" },
+  -- },
+  -- {
+  --   "kristijanhusak/vim-dadbod-completion",
+  --   ft = { "sql", "mysql", "plsql" },
+  --   dependencies = { "tpope/vim-dadbod" },
+  -- },
   "rust-lang/rust.vim",
 }

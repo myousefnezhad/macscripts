@@ -17,6 +17,7 @@ return {
         "pylsp",
         "gopls",
         "cssls",
+        "sqls",
         -- add more arguments for adding more language servers
       },
     },
