@@ -1,0 +1,1 @@
+ln -sf ~/opt/scripts/settings/ghostty  ~/Library/Application\ Support/com.mitchellh.ghostty/config
