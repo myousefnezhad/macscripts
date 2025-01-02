@@ -1,6 +1,11 @@
+window-padding-color = background
 font-family = "MesloLGM Nerd Font"
 font-size = 20
 theme = "Builtin Tango Dark"
 background-opacity = 0.9
 cursor-style = "bar"
 macos-titlebar-style = "tabs"
+macos-option-as-alt = true
+keybind = alt+left=esc:B
+keybind = alt+right=esc:F
+font-feature = -liga
