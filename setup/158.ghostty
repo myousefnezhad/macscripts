@@ -1,1 +1,2 @@
-ln -sf ~/opt/scripts/settings/ghostty  ~/Library/Application\ Support/com.mitchellh.ghostty/config
+mkdir -p ~/Library/Application\ Support/com.mitchellh.ghostty
+ln -sf ~/opt/scripts/settings/ghostty ~/Library/Application\ Support/com.mitchellh.ghostty/config
