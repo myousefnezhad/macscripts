@@ -199,3 +199,7 @@ alias pgl='psql -h db.cluster.learningbymachine.com -p 9999 -U postgres'
 alias pgld='psql -h db.cluster.learningbymachine.com -p 9999 -U postgres -d'
 alias scyl='cqlsh 172.25.59.2 $(cat ~/.cqlcli )'
 alias scyle='cqlsh 172.25.59.2 $(cat ~/.cqlcli ) -e'
+
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
