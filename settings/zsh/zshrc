@@ -203,3 +203,8 @@ alias scyle='cqlsh 172.25.59.2 $(cat ~/.cqlcli ) -e'
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export NDK_HOME="$ANDROID_HOME/ndk/27.0.12077973/"
+export PATH="$PATH:$ANDROID_HOME/emulator:$HOME/Library/Android/sdk/cmdline-tools/latest/bin/"
