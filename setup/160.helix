@@ -1,0 +1,1 @@
+ln $HOME/opt/scripts/settings/helix.toml $HOME/.config/helix/config.toml
