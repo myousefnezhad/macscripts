@@ -1,9 +1,10 @@
 theme = "dark_high_contrast"
 
 [editor]
-line-number = "relative"
 mouse = false
 true-color = true
+line-number = "relative"
+clipboard-provider = "pasteboard"
 
 [editor.cursor-shape]
 insert = "bar"
