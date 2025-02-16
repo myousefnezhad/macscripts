@@ -4,7 +4,7 @@ export TERM="screen-256color"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 
-export PATH="$HOME/opt/zig:$HOME/opt/go/bin:$HOME/go/bin:/usr/local/opt/ed/bin:$HOME/opt/google-cloud-sdk/bin:/usr/local/opt/ed/libexec/gnubin:/Users/tony/.local/share/gem/ruby/3.3.0/bin:/opt/homebrew/lib/ruby/gems/3.3.0/bin:/opt/homebrew/opt/ruby/bin:/opt/homebrew/opt/libpq/bin:/opt/homebrew/bin:$HOME/opt/helix:$PATH"
+export PATH="$HOME/opt/zig:$HOME/opt/go/bin:$HOME/go/bin:/usr/local/opt/ed/bin:$HOME/opt/google-cloud-sdk/bin:/usr/local/opt/ed/libexec/gnubin:/Users/tony/.local/share/gem/ruby/3.3.0/bin:/opt/homebrew/lib/ruby/gems/3.3.0/bin:/opt/homebrew/opt/ruby/bin:/opt/homebrew/opt/libpq/bin:/opt/homebrew/bin:$HOME/opt/llama_cpp:$HOME/opt/helix:$PATH"
 export PATH=~/.npm-global/bin:$PATH
 
 export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
@@ -208,3 +208,6 @@ export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export NDK_HOME="$ANDROID_HOME/ndk/27.0.12077973/"
 export PATH="$PATH:$ANDROID_HOME/emulator:$HOME/Library/Android/sdk/cmdline-tools/latest/bin/"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/tony/.lmstudio/bin"
