@@ -38,9 +38,8 @@ POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER=""
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon anaconda battery user host load status dir vcs) 
 plugins=(git tmux conda-zsh-completion kubectl-autocomplete zsh-autosuggestions zsh-syntax-highlighting brew flutter)
 source $ZSH/oh-my-zsh.sh
+
 autoload -U compinit && compinit
-source $HOME/opt/scripts/bin/multi-conda
-source $HOME/opt/scripts/settings/zsh/zstartupscript.sh
 
 alias zshconfig="vim ~/.zshrc"
 alias yt-dlp="yt-dlp -f mp4"
@@ -58,10 +57,26 @@ alias pgld='psql -h db.cluster.learningbymachine.com -p 9999 -U postgres -d'
 alias scyl='cqlsh 172.25.59.2 $(cat ~/.cqlcli )'
 alias scyle='cqlsh 172.25.59.2 $(cat ~/.cqlcli ) -e'
 
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/tony/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/tony/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/tony/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/tony/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+#source $HOME/opt/scripts/settings/zsh/zstartupscript.sh
+#source $HOME/opt/scripts/bin/multi-conda
 #[[ $TTY == *"tty"* ]] && ZSH_THEME="maran"
 #POWERLEVEL9K_MULTILINE_LAST_PROMPT_PERFIX=""
 #POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PERFIX=""
