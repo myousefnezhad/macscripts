@@ -57,6 +57,16 @@ alias pgld='psql -h db.cluster.learningbymachine.com -p 9999 -U postgres -d'
 alias scyl='cqlsh 172.25.59.2 $(cat ~/.cqlcli )'
 alias scyle='cqlsh 172.25.59.2 $(cat ~/.cqlcli ) -e'
 
+function tmux_select()
+{
+    if [[ $# == 0 ]] && command tmux ls >& /dev/null; then
+        command tmux attach \; choose-tree -s
+    else
+        command tmux new-session -s tony_desk
+
+    fi
+}
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/tony/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
