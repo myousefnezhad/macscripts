@@ -1,6 +1,21 @@
 export TERM="screen-256color"
 [[ $TMUX = "" ]] && export TERM="xterm-256color"
 
+export ZSH="$HOME/opt/oh-my-zsh"
+export LC_ALL=en_US.UTF-8
+ZSH_THEME="powerlevel10k/powerlevel10k"
+POWERLEVEL9K_MODE="nerdfont-complete"
+POWERLEVEL9K_DISABLE_RPROMPT=true
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_ANACONDA_SHOW_PYTHON_VERSION=true
+POWERLEVEL9K_ANACONDA_LEFT_DELIMITER=""
+POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER=""
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon anaconda battery user host load status dir vcs) 
+plugins=(git tmux conda-zsh-completion kubectl-autocomplete zsh-autosuggestions zsh-syntax-highlighting brew flutter)
+
+source $ZSH/oh-my-zsh.sh
+autoload -U compinit && compinit
+
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export NDK_HOME="$ANDROID_HOME/ndk/27.0.12077973/"
 export JAVA_HOME="$HOME/opt/jdk24/Contents/Home"
@@ -25,21 +40,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
-export ZSH="$HOME/opt/oh-my-zsh"
-export LC_ALL=en_US.UTF-8
-ZSH_THEME="powerlevel10k/powerlevel10k"
-POWERLEVEL9K_MODE="nerdfont-complete"
-POWERLEVEL9K_DISABLE_RPROMPT=true
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_ANACONDA_SHOW_PYTHON_VERSION=true
-POWERLEVEL9K_ANACONDA_LEFT_DELIMITER=""
-POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER=""
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon anaconda battery user host load status dir vcs) 
-plugins=(git tmux conda-zsh-completion kubectl-autocomplete zsh-autosuggestions zsh-syntax-highlighting brew flutter)
-source $ZSH/oh-my-zsh.sh
-
-autoload -U compinit && compinit
 
 alias zshconfig="vim ~/.zshrc"
 alias yt-dlp="yt-dlp -f mp4"
