@@ -27,7 +27,7 @@ export EV_EZFMRI="easyfmri"
 # Disable conda base environment by default
 export DI_CONDA_BASE="1"
 # Run Conda init at startup
-export EN_CONDA_INIT="1"
+export EN_CONDA_INIT="0"
 # This sets julia base direcotry
 export EN_JULIA="1"
 # This sets AFNI base directory based on $AFNI_PATH
