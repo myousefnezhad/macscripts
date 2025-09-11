@@ -1,40 +1,97 @@
 export TERM="screen-256color"
 [[ $TMUX = "" ]] && export TERM="xterm-256color"
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-# Path to your oh-my-zsh installation.
-
-export PATH="$HOME/opt/zig:$HOME/opt/go/bin:$HOME/go/bin:/usr/local/opt/ed/bin:$HOME/opt/google-cloud-sdk/bin:/usr/local/opt/ed/libexec/gnubin:/Users/tony/.local/share/gem/ruby/3.3.0/bin:/opt/homebrew/lib/ruby/gems/3.3.0/bin:/opt/homebrew/opt/ruby/bin:/opt/homebrew/opt/libpq/bin:/opt/homebrew/bin:$HOME/opt/helix:$PATH"
-export PATH=~/.npm-global/bin:$PATH
-
-export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
-export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"
 
 export ZSH="$HOME/opt/oh-my-zsh"
 export LC_ALL=en_US.UTF-8
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
-#[[ $TTY == *"tty"* ]] && ZSH_THEME="maran"
 POWERLEVEL9K_MODE="nerdfont-complete"
-
 POWERLEVEL9K_DISABLE_RPROMPT=true
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_ANACONDA_SHOW_PYTHON_VERSION=true
+POWERLEVEL9K_ANACONDA_LEFT_DELIMITER=""
+POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER=""
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon anaconda battery user host load status dir vcs) 
+plugins=(git tmux conda-zsh-completion kubectl-autocomplete zsh-autosuggestions zsh-syntax-highlighting brew flutter)
+
+source $ZSH/oh-my-zsh.sh
+autoload -U compinit && compinit
+
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export NDK_HOME="$ANDROID_HOME/ndk/27.0.12077973/"
+export JAVA_HOME="$HOME/opt/jdk24/Contents/Home"
+
+export PATH="$PATH:$HOME/bin:/usr/local/bin:$HOME/opt/zig:$HOME/opt/go/bin:$HOME/go/bin:/usr/local/opt/ed/bin:$HOME/opt/google-cloud-sdk/bin:/usr/local/opt/ed/libexec/gnubin:/Users/tony/.local/share/gem/ruby/3.3.0/bin:/opt/homebrew/lib/ruby/gems/3.3.0/bin:/opt/homebrew/opt/ruby/bin:/opt/homebrew/opt/libpq/bin:/opt/homebrew/bin:$HOME/opt/llama_cpp:$HOME/opt/helix:$HOME/.npm-global/bin:$HOME/opt/scripts/bin:/opt/homebrew/opt/ed/bin:/opt/homebrew/opt/ed/libexec/gnubin:$HOME/opt/scripts/bin:/opt/homebrew/opt/llvm/bin:$ANDROID_HOME/emulator:$HOME/Library/Android/sdk/cmdline-tools/latest/bin/:$JAVA_HOME:$HOME/opt/jdtls/bin:/Users/tony/.lmstudio/bin:/opt/homebrew/opt/llvm/bin:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:/opt/homebrew/opt/libpq/bin:/Users/tony/opt/flutter/bin:/opt/homebrew/opt/libpq/bin:/opt/homebrew/opt/ruby/bin"
+export LDFLAGS="-L/opt/homebrew/opt/ruby/lib -L/opt/homebrew/opt/llvm/lib/c++ -L/opt/homebrew/opt/llvm/lib/unwind -lunwind -L/opt/homebrew/opt/llvm/lib -L/opt/homebrew/opt/libpq/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include -I/opt/homebrew/opt/ruby/include -I/opt/homebrew/opt/libpq/include"
+export DYLD_LIBRARY_PATH="/opt/homebrew/lib:$DYLD_LIBRARY_PATH"
+
+export CLANG_CONFIG_FILE_SYSTEM_DIR="/opt/homebrew/etc/clang"
+export CLANG_CONFIG_FILE_USER_DIR="$HOME/.config/clang"
+
+export CPLUS_INCLUDE_PATH="/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include"
+
+export GOPATH="$HOME/go"
+export GO111MODULE=on
+
+export COPYFILE_DISABLE=true
+export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig:/opt/homebrew/opt/ruby/lib/pkgconfig"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+alias zshconfig="vim ~/.zshrc"
+alias yt-dlp="yt-dlp -f mp4"
+if command -v lsd &> /dev/null
+then
+  alias ls="lsd"
+fi
+alias l='/bin/ls'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+alias mc="mc --nosubshell"
+alias pgl='psql -h db.cluster.learningbymachine.com -p 9999 -U postgres'
+alias pgld='psql -h db.cluster.learningbymachine.com -p 9999 -U postgres -d'
+alias scyl='cqlsh 172.25.59.2 $(cat ~/.cqlcli )'
+alias scyle='cqlsh 172.25.59.2 $(cat ~/.cqlcli ) -e'
+
+function tmux_select()
+{
+    if [[ $# == 0 ]] && command tmux ls >& /dev/null; then
+        command tmux attach \; choose-tree -s
+    else
+        command tmux new-session -s tony_desk
+
+    fi
+}
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/tony/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/tony/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/tony/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/tony/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+#source $HOME/opt/scripts/settings/zsh/zstartupscript.sh
+#source $HOME/opt/scripts/bin/multi-conda
+#[[ $TTY == *"tty"* ]] && ZSH_THEME="maran"
 #POWERLEVEL9K_MULTILINE_LAST_PROMPT_PERFIX=""
 #POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PERFIX=""
 #
-POWERLEVEL9K_ANACONDA_LEFT_DELIMITER=""
-POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER=""
 #POWERLEVEL9K_PYTHON_ICON=""
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon anaconda battery user host load status dir vcs) 
 #[[ $TMUX = "" ]] && POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon anaconda battery user host load status dir vcs) 
 #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator load  background_jobs history time)
 #[[ $TMUX != "" ]] && POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
@@ -106,18 +163,10 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon anaconda battery user host load statu
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux conda-zsh-completion kubectl-autocomplete zsh-autosuggestions zsh-syntax-highlighting brew flutter)
-#source $HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
-source $ZSH/oh-my-zsh.sh
-
-autoload -U compinit && compinit
-
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -141,21 +190,15 @@ autoload -U compinit && compinit
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="vim ~/.zshrc"
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+#source $HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 #alias ohmyzsh="vim ~/.oh-my-zsh"
-alias yt-dlp="yt-dlp -f mp4"
 #
 #alias vim="nvim"
-if command -v lsd &> /dev/null
-then
-  alias ls="lsd"
-fi
-alias l='/bin/ls'
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
-alias mc="mc --nosubshell"
-
 #alias codelldb="while sleep 1; do $(find $HOME/.vscode/extensions -name codelldb) --port 13000 --liblldb $(find $HOME/.vscode/extensions/ -name liblldb.dylib); done"
 #alias lldb-vscode="while sleep 1; do $(find $HOME/.vscode/extensions -name lldb-vscode); done"
 #PATH="/opt/homebrew/opt/ed/libexec/gnubin:$PATH"
@@ -214,3 +257,6 @@ PERL5LIB="/Users/tony/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB
 PERL_LOCAL_LIB_ROOT="/Users/tony/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/Users/tony/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/tony/perl5"; export PERL_MM_OPT;
+#source "/Users/tony/.sdkman/bin/sdkman-init.sh"
+#export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-22.jdk/Contents/Home"
+#export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
