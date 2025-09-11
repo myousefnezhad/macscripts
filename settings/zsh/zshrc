@@ -208,3 +208,9 @@ export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export NDK_HOME="$ANDROID_HOME/ndk/27.0.12077973/"
 export PATH="$PATH:$ANDROID_HOME/emulator:$HOME/Library/Android/sdk/cmdline-tools/latest/bin/"
+
+PATH="/Users/tony/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/tony/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/tony/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/tony/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/tony/perl5"; export PERL_MM_OPT;
