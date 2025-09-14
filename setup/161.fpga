@@ -1,0 +1,3 @@
+brew install surfer icarus-verilog ghdl
+cargo install vhdl_ls
+sudo npm install -g @imc-trading/svlangserver
