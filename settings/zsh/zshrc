@@ -19,6 +19,7 @@ autoload -U compinit && compinit
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export NDK_HOME="$ANDROID_HOME/ndk/27.0.12077973/"
 export JAVA_HOME="$HOME/opt/jdk24/Contents/Home"
+export JAVA_HOME=$(/usr/libexec/java_home -v 21)
 
 export PATH="$PATH:$HOME/bin:/usr/local/bin:$HOME/opt/zig:$HOME/opt/go/bin:$HOME/go/bin:/usr/local/opt/ed/bin:$HOME/opt/google-cloud-sdk/bin:/usr/local/opt/ed/libexec/gnubin:/Users/tony/.local/share/gem/ruby/3.3.0/bin:/opt/homebrew/lib/ruby/gems/3.3.0/bin:/opt/homebrew/opt/ruby/bin:/opt/homebrew/opt/libpq/bin:/opt/homebrew/bin:$HOME/opt/llama_cpp:$HOME/opt/helix:$HOME/.npm-global/bin:$HOME/opt/scripts/bin:/opt/homebrew/opt/ed/bin:/opt/homebrew/opt/ed/libexec/gnubin:$HOME/opt/scripts/bin:/opt/homebrew/opt/llvm/bin:$ANDROID_HOME/emulator:$HOME/Library/Android/sdk/cmdline-tools/latest/bin/:$JAVA_HOME:$HOME/opt/jdtls/bin:/Users/tony/.lmstudio/bin:/opt/homebrew/opt/llvm/bin:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:/opt/homebrew/opt/libpq/bin:/Users/tony/opt/flutter/bin:/opt/homebrew/opt/libpq/bin:/opt/homebrew/opt/ruby/bin"
 export LDFLAGS="-L/opt/homebrew/opt/ruby/lib -L/opt/homebrew/opt/llvm/lib/c++ -L/opt/homebrew/opt/llvm/lib/unwind -lunwind -L/opt/homebrew/opt/llvm/lib -L/opt/homebrew/opt/libpq/lib"
