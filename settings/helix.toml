@@ -1,5 +1,4 @@
 theme = "dark_high_contrast"
-
 [editor]
 mouse = false
 true-color = true
