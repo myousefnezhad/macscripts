@@ -1,0 +1,2 @@
+llama-server --jinja --host 0.0.0.0 --port 8000 --api-key b78f126882fbbd9b210f0e0accadb550310e5e18 --model gpt-oss-120b-MXFP4-00001-of-00002.gguf
+llama-server --jinja --host 0.0.0.0 --port 8000 --api-key b78f126882fbbd9b210f0e0accadb550310e5e18 --model gpt-oss-20b-MXFP4.gguf
